@@ -21,21 +21,3 @@
 {{ end }}
 
 
-{{ if (.Params.gitment) }}
-<div id="git-comments"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-  var gitment = new Gitment({
-    id: '{{ .Slug }}',  // 可选, 默认为 location.href
-    owner: 'taoyonggang@hotmail.com',
-    repo: 'https://github.com/taoyonggang/360tai',
-    oauth: {
-      client_id: '39234e79563bdc3688ce',
-      client_secret: '5904db685564a848adbd54ba7f5009dd73b02919',
-    }
-  })
-  gitment.render('git-comments')
-</script>
-{{ end }}
-
